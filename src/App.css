@@ -1,38 +1,56 @@
-.App {
-  text-align: center;
+/* reset */
+html {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 10px;
+  line-height: 1.5;
+  letter-spacing: -0.025em;
+  color: #333;
+}
+body * {
+  box-sizing: border-box;
+}
+*:focus {
+  outline: 1px dotted #333;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  vertical-align: top;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* common style */
+.a11yHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0, 0);
+  clip-path: polygon(0, 0);
+  overflow: hidden;
+  text-indent: -9999px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button,
+input,
+select,
+a {
+  cursor: pointer;
 }
